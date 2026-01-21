@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "lobby-stream",
     "public": "release/wwwroot",
     "ignore": [
       "firebase.json",
