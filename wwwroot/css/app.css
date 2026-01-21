@@ -169,6 +169,37 @@ a, .btn-link {
         content: var(--blazor-load-percentage-text, "Loading");
     }
 
+/* Loading Bar Animation */
+.loading-bar {
+    animation: indeterminate 2s infinite linear;
+    transform-origin: 0% 50%;
+}
+
+@keyframes indeterminate {
+    0% {
+        transform: translateX(0) scaleX(0);
+    }
+
+    40% {
+        transform: translateX(0) scaleX(0.4);
+    }
+
+    100% {
+        transform: translateX(100%) scaleX(0.5);
+    }
+}
+
+/* Force vertical layout (Header -> Body -> Footer) */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* This pushes the footer down if the content is short */
+}
+
 /* Misc */
 code {
     color: #c02d76;
